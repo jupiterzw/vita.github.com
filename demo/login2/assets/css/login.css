@@ -44,7 +44,7 @@ table {
 * { margin:0; padding:0; }
 html{height: 100%;}
 body {
-	background: url(../img/bg.jpg) no-repeat center bottom;
+	background: #F3F3F3 url(../img/bg.jpg) no-repeat center bottom;
     color: #25488c;
     height:100%;
     width:100%;
