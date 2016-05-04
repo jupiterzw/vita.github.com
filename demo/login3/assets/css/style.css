@@ -1,0 +1,188 @@
+﻿
+/* ------- This is the CSS Reset ------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+abbr, acronym, address, big, cite, code, del,
+dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr,
+th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu,
+nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* ------- HTML5 display-role reset for older browsers ------- */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+* { margin:0; padding:0; }
+body {
+    background:url(../img/bg.png) repeat;
+    height:100%;
+	font-family:Microsoft YaHei,Arial,Verdana,sans-serif;
+}
+img { border:none; }
+form{position: relative;}
+form,input,button{font-family:Microsoft YaHei,Arial,Verdana,sans-serif; text-decoration:none;}
+
+input:-moz-placeholder { color: #9d9e9e; }
+input:-ms-input-placeholder { color: #9d9e9e; }
+input::-webkit-input-placeholder { color: #9d9e9e; }
+input:hover {
+    background: #F0F3FB;
+    color: #414848;
+}
+input:focus {
+    background: #F0F3FB;
+    color: #414848;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,0.25);
+}
+
+button {
+    padding: 11px 25px;
+    font-weight: 300;
+    font-size: 18px;
+    color: #fff;
+    text-shadow: 0px 1px 0 rgba(0,0,0,0.25);
+    
+    background: #0363AD;
+    border: 1px solid #0363AD;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    box-shadow: inset 0 0 2px rgba(255,255,255,0.75);
+    -moz-box-shadow: inset 0 0 2px rgba(255,255,255,0.75);
+    -webkit-box-shadow: inset 0 0 2px rgba(255,255,255,0.75);
+}
+button:hover {
+    background: #0383d3;
+    border: 1px solid rgba(255,255,255,0.75);
+    
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.5);
+}
+button:focus {
+    background: #0383d3;
+    
+    box-shadow: inset 0 1px 4px rgba(255,255,255,0.5);
+    -moz-box-shadow: inset 0 1px 4px rgba(255,255,255,0.5);
+    -webkit-box-shadow: inset 0 1px 4px rgba(255,255,255,0.5);
+}
+
+.form-control {
+    font-weight: 400;
+    font-size: 14px;
+    color: #414848;
+    text-shadow: 1px 1px 0 rgba(255,255,255,1.0);
+    
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -moz-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+    -webkit-box-shadow: inset 0 1px 3px rgba(0,0,0,0.50);
+}
+.lg-container{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -200px;
+}
+.login-form{    width: 300px;
+    margin: 0 auto;
+    position: relative;
+    background: #f3f3f3;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+.login-form .login-tit {font-size: 30px;text-shadow: 0 1px 4px rgba(0,0,0,.2);text-align: center;padding: 40px 30px 30px 30px;color: #414848;text-shadow: 1px 1px 0 rgba(256,256,256,1.0);}
+.login-form .form-group{position: relative;padding:0 30px 25px 30px;}
+.login-form .form-group label{font-size: 14px;}
+.login-form .form-control{width: 100%;padding: 15px 25px;}
+.login-form .remember-me{color:#414848;}
+.login-form .remember-me input[type="checkbox"]{position: relative;top:2px;}
+.login-form .lg-icon{
+    width: 46px;
+    height: 47px;
+    display: block;
+    position: absolute;
+    left: -49px;
+    padding-right: 2px;
+    z-index: -1;
+    -moz-border-radius-top-left: 5px;
+    -moz-border-radius-bottom-left: 5px;
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+}
+.login-form .user-icon{top:101px;background:rgba(65,72,72,0.75) url(../img/user-icon.png) no-repeat center center;
+    animation:mymove 1s;-webkit-animation:mymove 1s;}
+.login-form .key-icon{top:178px;background:rgba(65,72,72,0.75) url(../img/key-icon.png) no-repeat center center;
+    animation-delay:1s;-webkit-animation-delay:1s;animation:mymove 2s;-webkit-animation:mymove 2s;}
+@keyframes mymove{
+    from {left:0px;}
+    to {left:-49px;}
+}
+@-webkit-keyframes mymove{
+    from {left:0px;}
+    to {left:-49px;}
+}
+.login-form .op-btns{padding: 25px 30px 40px 30px;background: #F0F3FB;border-top: 1px solid #fff;-webkit-box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);box-shadow: inset 0 1px 0 rgba(0,0,0,0.15);}
+.login-form .submit_button{ 
+    width:100%;
+    cursor: pointer;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+
+}
+.gradient {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.2) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.3)), color-stop(100%,rgba(0,0,0,0.2)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(0,0,0,0.2) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(0,0,0,0.2) 100%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%,rgba(0,0,0,0.2) 100%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%,rgba(0,0,0,0.2) 100%);
+}

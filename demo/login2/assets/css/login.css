@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* ------- This is the CSS Reset ------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, 
+abbr, acronym, address, big, cite, code, del,
+dfn, em, img, ins, kbd, q, s, samp, small,
+strike, strong, sub, sup, tt, var, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label,
+legend, table, caption, tbody, tfoot, thead, tr,
+th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu,
+nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* ------- HTML5 display-role reset for older browsers ------- */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+* { margin:0; padding:0; }
+html{height: 100%;}
+body {
+	background: url(../img/bg.jpg) no-repeat center bottom;
+    color: #25488c;
+    height:100%;
+    width:100%;
+    background-size:cover;
+	font-family:Microsoft YaHei,Arial,Verdana,sans-serif;
+}
+img { border:none; }
+form{position: relative;}
+form,input,button{font-family:Microsoft YaHei,Arial,Verdana,sans-serif; text-decoration:none;}
+
+input:-moz-placeholder { color: #25488c; }
+input:-ms-input-placeholder { color: #25488c; }
+input::-webkit-input-placeholder { color: #25488c; }
+input:focus {
+    outline: none;
+    border: 1px solid #999;
+}
+
+button:hover {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+}
+button:active {
+    -moz-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    -webkit-box-shadow:
+        0 15px 30px 0 rgba(255,255,255,.15) inset,
+        0 2px 7px 0 rgba(0,0,0,.2);
+    box-shadow:        
+        0 5px 8px 0 rgba(0,0,0,.1) inset,
+        0 1px 4px 0 rgba(0,0,0,.1);
+
+    border: 0px solid #ef4300;
+}
+.form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -moz-box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+/*------------// layout //------------------*/
+.lg-container{padding-top:200px;padding-bottom: 100px;}
+.login-box{width:980px;margin:auto;display:table;background: rgba(255,255,255,0.2);padding: 35px 0;box-shadow:0px 0px 5px 1px #ddd}
+.login-left{width:50%;text-align:center;display: table-cell;vertical-align: middle;}
+.login-right{width:50%;display: table-cell;}
+.vr-line{background: url(../img/vr-line.png) repeat-y left center;}
+.vr-line > div{padding-left: 90px;}
+
+.login-tit {font-size: 32px;width:350px;text-shadow: 0 1px 4px rgba(0,0,0,.2);text-align: center;padding-bottom: 10px;color:#003883;line-height: 40px;position: relative;
+    background:-webkit-repeating-linear-gradient(-90deg, #003883, #016ABA 20px, rgb(15, 104, 193) 20px, rgb(1, 89, 168) 40px, #003883 40px);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+.login-tit img{vertical-align: middle;position: relative;top:-3px;}
+.login-tit:after{border-bottom: 1px dashed #003883;content: ' ';display: block;margin-top:15px;}
+.login-form{width:350px;height:auto;}
+.login-form .form-group{position: relative;margin-top:15px;display: table;width:100%;}
+.login-form .form-group label{font-size: 14px;}
+.login-form .form-control{width: 100%;height: 38px;box-sizing: border-box;display: table-cell;}
+.login-form .remember-me {color:#25488c;}
+.login-form .remember-me input[type="checkbox"]{position: relative;top:2px;}
+.login-form .lg-txt{display: table-cell;width:80px;height:38px;line-height: 38px;}
+.login-form .lg-txt label{text-align-last: justify;text-align: justify;display: inline-block;width:55px;font-size:18px;}
+.login-form .submit_button{ 
+    font-size:24px; width:100%;
+    cursor: pointer;
+    height: 44px;
+    padding: 0;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    color: #D3EBFF;
+    text-shadow: 0 -1px 0 #444444;
+    border: 1px solid #004C9B;
+    border: 1px solid rgba(255,255,255,.15);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow:0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow:0 1px 0 rgba(255, 255, 255, 0.3) inset, 0 1px 1px rgba(0, 0, 0, 0.3);    
+    font-size: 20px;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+    -webkit-transition: all .2s;
+    -ms-transition: all .2s;
+
+    background-color: #0383d3;
+    background-image: linear-gradient(top, #0383d3 0%, #004c9b 100%);
+    background-image: -o-linear-gradient(top, #0383d3 0%, #004c9b 100%);
+    background-image: -moz-linear-gradient(top, #0383d3 0%, #004c9b 100%);
+    background-image: -webkit-linear-gradient(top, #0383d3 0%, #004c9b 100%);
+    background-image: -ms-linear-gradient(top, #0383d3 0%, #004c9b 100%);
+}
+.login-form .submit_button:hover{
+    background: #004c9b ;
+}
+footer{color:#666;font-size: 12px;position: absolute;bottom: 50px;width:100%;}
