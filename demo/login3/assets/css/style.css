@@ -43,7 +43,7 @@ table {
 }
 * { margin:0; padding:0; }
 body {
-    background:url(../img/bg.png) repeat;
+    background:#32668d url(../img/bg.png) repeat;
     height:100%;
 	font-family:Microsoft YaHei,Arial,Verdana,sans-serif;
 }
