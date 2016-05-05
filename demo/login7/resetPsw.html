@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>找回密码</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="lg-container">
+        <div class="login-resetpsw">
+            <div class="login-top">
+                <img src="assets/img/logo.png" class="l-logo">
+                <a href="login.html">登录</a>
+            </div>
+            <div class="login-box">
+                <div class="login-head">找回密码</div>
+                <div class="login-form">
+                        <div class="login-tab-con">
+                            <div class="input-group">
+                                <span class="input-group-addon">手机号码：</span>
+                                <input type="text" name="phonenumber" class="form-control" id="phonenumber" placeholder="请输入手机号码">
+                                <div class="error-tips"></div>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">短信验证码：</span>
+                                <input type="text" name="vcode" id="vcode" class="form-control v-input" placeholder="请输入6位数字验证码">
+                                <span class="input-group-addon vcode-btn"><input type="button" class="btn btn-default" value="获取验证码"></span>
+                                <div class="error-tips"></div>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">密码：</span>
+                                <input type="password" name="password" id="password" class="form-control" placeholder="请设置密码" onchange="checkPasswords()">
+                                <div class="error-tips"></div>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">确认密码：</span>
+                                <input type="password" name="password" id="passwordagain" class="form-control" placeholder="请再次输入密码" onchange="checkPasswords()">
+                                <div class="error-tips"></div>
+                            </div>
+                            <div class="form-group reset-tips">
+                                密码规则：由6-16位数字、字母或字符组成，不含空格
+                            </div>
+                        </div>
+                        <div class="form-group"><button type="submit" class="submit_button" onClick="submit();">确 定</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery-1.10.1.min.js" ></script>
+    <script type="text/javascript">
+
+        var _phonenumber = $("#phonenumber");
+        var _vcode = $("#vcode");
+        var _password = $("#password");
+        var _passwordagain = $("#passwordagain");
+
+        $('.login-form .input-group input').keyup(function(){
+            $(this).siblings(".error-tips").html('').hide();
+        });
+
+        function submit() {
+            if(_phonenumber.val()==""){ 
+                _phonenumber.siblings(".error-tips").html('<span class="onError">手机号码不能为空！请重新输入</span>').show();
+                _phonenumber.focus(); 
+                return false; 
+            }
+            if (!_phonenumber.val().match(/^(1(([35][0-9])|(47)|[8][01236789]))\d{8}$/)) {
+                _phonenumber.siblings(".error-tips").html('<span class="onError">手机号码格式不正确！请重新输入</span>').show();
+                _phonenumber.focus(); 
+                return false; 
+            } 
+            else _phonenumber.siblings(".error-tips").html('').hide();
+
+            if(_vcode.val()==""){ 
+                _vcode.siblings(".error-tips").html('<span class="onError">验证码不能为空！请重新输入</span>').show();
+                _vcode.focus(); 
+                return false; 
+            }
+            else if (!_vcode.val().match(/^.{6}$/)) {
+                _vcode.siblings(".error-tips").html('<span class="onError">验证码长度不正确！请重新输入</span>').show();
+                _vcode.focus(); 
+                return false; 
+            } 
+            else _vcode.siblings(".error-tips").html('').hide();
+
+            if(_password.val()==""){ 
+                _password.siblings(".error-tips").html('<span class="onError">密码不能为空！请重新输入</span>').show();
+                _passwordagain.siblings(".error-tips").html('').hide();
+                _password.focus(); 
+                return false; 
+            }
+            else if (!_password.val().match(/^[\w]{6,16}$/)) {
+                _password.siblings(".error-tips").html('<span class="onError">密码长度不正确！请重新输入</span>').show();
+                _passwordagain.siblings(".error-tips").html('').hide();
+                _password.focus(); 
+                return false; 
+            };
+            checkPasswords();
+        }
+        function checkPasswords() {
+            if (_password.val() != _passwordagain.val())  _passwordagain.siblings(".error-tips").html('<span class="onError">两次输入的密码不匹配</span>').show();
+            else  _passwordagain.siblings(".error-tips").html('').hide();
+        } 
+    </script>
+</body>
+</html>
