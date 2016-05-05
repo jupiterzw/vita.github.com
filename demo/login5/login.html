@@ -38,11 +38,11 @@
                         <div class="login-tab-con">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="icon-user"></i></span>
-                                <input type="text" name="username" class="form-control" id="cellphone" placeholder="请输入手机号码" pattern="^1[3-9]\d{9}$" required="required">
+                                <input type="text" name="username" class="form-control" id="cellphone" placeholder="请输入手机号码" pattern="^1[3-9]\d{9}$">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="icon-key"></i></span>
-                                <input type="text" name="vcode" class="form-control" placeholder="请输入6位数字验证码" required="required">
+                                <input type="text" name="vcode" class="form-control" placeholder="请输入6位数字验证码">
                                 <span class="input-group-addon vcode-btn"><input type="button" class="btn btn-default" value="获取验证码"></span>
                             </div>
                         </div>
@@ -54,9 +54,17 @@
     </div>
     <script src="assets/js/jquery-1.10.1.min.js" ></script>
     <script type="text/javascript">
-        $('.login-tab a').click(function(){
-            $(this).addClass('current').siblings().removeClass('current');
-            $('.login-tab-con').toggleClass('current');
+        $('.login-tab a').each(function(e){
+            $(this).click(function(){
+                $(this).addClass('current').siblings().removeClass('current');
+                $('.login-tab-con.current input').each(function(){
+                    this.removeAttribute("required");
+                });
+                $('.login-tab-con').eq(e).addClass('current').siblings().removeClass('current');
+                $('.login-tab-con.current input').each(function(){
+                    this.setAttribute("required",true);
+                });
+            });
         });
         cellphone.oninput=function(){   
             cellphone.setCustomValidity("");   
