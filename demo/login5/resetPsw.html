@@ -24,20 +24,20 @@
                         <div class="login-tab-con">
                             <div class="input-group">
                                 <span class="input-group-addon">手机号码：</span>
-                                <input type="text" name="username" class="form-control" placeholder="请输入手机号码">
+                                <input type="text" name="username" class="form-control" id="cellphone" placeholder="请输入手机号码" pattern="^1[3-9]\d{9}$" required="required">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">短信验证码：</span>
-                                <input type="text" name="vcode" class="form-control">
+                                <input type="text" name="vcode" class="form-control" required="required">
                                 <span class="input-group-addon vcode-btn"><input type="button" class="btn btn-default" value="获取验证码"></span>
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">密码：</span>
-                                <input type="password" name="password" class="form-control" placeholder="请设置密码">
+                                <input type="password" name="password" id="password" class="form-control" placeholder="请设置密码" required="required">
                             </div>
                             <div class="input-group">
                                 <span class="input-group-addon">确认密码：</span>
-                                <input type="password" name="password" class="form-control" placeholder="请再次输入密码">
+                                <input type="password" name="password" id="passwordagain" class="form-control" placeholder="请再次输入密码" onchange="checkPasswords()" required="required">
                             </div>
                             <div class="form-group reset-tips">
                                 密码规则：由6-16位数字、字母或字符组成，不含空格
@@ -49,5 +49,18 @@
             </div>
         </div>
     </div>
+    <script src="assets/js/jquery-1.10.1.min.js" ></script>
+    <script type="text/javascript">
+        cellphone.oninput=function(){   
+            cellphone.setCustomValidity("");   
+        };   
+        cellphone.oninvalid=function(){   
+            cellphone.setCustomValidity("请输入正确的手机号码");   
+        };   
+        function checkPasswords() {
+            if (password.value != passwordagain.value)  passwordagain.setCustomValidity("两次输入的密码不匹配");
+            else  passwordagain.setCustomValidity("");
+        } 
+    </script>
 </body>
 </html>
