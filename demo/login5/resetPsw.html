@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>找回密码</title>
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/login.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="lg-container">
+        <div class="login-resetpsw">
+            <div class="login-top">
+                <img src="assets/img/logo.png" class="l-logo">
+                <a href="login.html">登录</a>
+            </div>
+            <div class="login-box">
+                <div class="login-head">找回密码</div>
+                <div class="login-form">
+                    <form action="" method="post">
+                        <div class="login-tab-con">
+                            <div class="input-group">
+                                <span class="input-group-addon">手机号码：</span>
+                                <input type="text" name="username" class="form-control" placeholder="请输入手机号码">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">短信验证码：</span>
+                                <input type="text" name="vcode" class="form-control">
+                                <span class="input-group-addon vcode-btn"><input type="button" class="btn btn-default" value="获取验证码"></span>
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">密码：</span>
+                                <input type="password" name="password" class="form-control" placeholder="请设置密码">
+                            </div>
+                            <div class="input-group">
+                                <span class="input-group-addon">确认密码：</span>
+                                <input type="password" name="password" class="form-control" placeholder="请再次输入密码">
+                            </div>
+                            <div class="form-group reset-tips">
+                                密码规则：由6-16位数字、字母或字符组成，不含空格
+                            </div>
+                        </div>
+                        <div class="form-group"><button type="submit" class="submit_button">确 定</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
