@@ -115,6 +115,7 @@ button:active {
     -moz-transition: all .2s;
     -webkit-transition: all .2s;
     -ms-transition: all .2s;
+    box-sizing: border-box;
 }
 .login-form{width:350px;max-width:90%;height:auto;padding: 220px 0 100px;margin: 0 auto;}
 .login-form .login-tit {font-size: 30px;text-shadow: 0 1px 4px rgba(0,0,0,.2);text-align: center;padding-bottom: 20px;    
@@ -178,8 +179,8 @@ button:active {
     right: -55px;
     width: 40px;
     height: 40px;
-    background: #054779;
-    background: rgb(4, 92, 158);
+    background: #FF0000;
+    background: rgba(255, 0, 0, 0.5);
     -moz-border-radius: 6px;
     -webkit-border-radius: 6px;
     border-radius: 6px;
