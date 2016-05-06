@@ -20,22 +20,23 @@
         <div class="page-container">
             <div class="login-form">
                 <div class="login-tit">后台登录</div>
-                <form action="" method="post">
+                <div class="form-con">
                     <div class="form-group">
                         <span class="lg-icon user-icon"></span>
-                        <input type="text" name="username" class="form-control" placeholder="请输入您的用户名！">
+                        <input type="text" name="username" class="form-control" placeholder="请输入您的用户名！" regex="^\w{3,16}$">
+                        <div class="error"><span>+</span></div>
                     </div>
                     <div class="form-group">
                         <span class="lg-icon key-icon"></span>
-                        <input type="password" name="password" class="form-control" placeholder="请输入您的用户密码！">
+                        <input type="password" name="password" class="form-control" placeholder="请输入您的用户密码！" regex="^\w+">
+                        <div class="error"><span>+</span></div>
                     </div>
                     <div class="form-group remember-me">
                         <input type="checkbox" name="checkbox" id="save_me">
                         <label for="save_me">记住</label>
                     </div>
                     <div class="form-group"><button type="submit" class="submit_button">登 录</button></div>
-                    <div class="error"><span>+</span></div>
-                </form>
+                </div>
             </div>
         </div>
 		

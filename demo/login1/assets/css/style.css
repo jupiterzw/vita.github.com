@@ -53,8 +53,8 @@ body {background-color: #323B55;
 	font-family:Microsoft YaHei,Arial,Verdana,sans-serif;
 }
 img { border:none; }
-form{position: relative;}
-form,input,button{font-family:Microsoft YaHei,Arial,Verdana,sans-serif; text-decoration:none;}
+.form-con{position: relative;}
+input,button{font-family:Microsoft YaHei,Arial,Verdana,sans-serif; text-decoration:none;}
 
 input:-moz-placeholder { color: #fff; }
 input:-ms-input-placeholder { color: #fff; }

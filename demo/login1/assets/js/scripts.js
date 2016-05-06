@@ -1,31 +1,16 @@
 jQuery(function($){
-
-    $('.page-container form').submit(function(){
-        var username = $(this).find('input[type="text"].form-control');
-        var password = $(this).find('input[type="password"].form-control');
-        if(username.val() == '') {
-            $(this).find('.error').fadeOut('fast', function(){
+    $('body').on('blur', '.form-control', function(){
+        var regex = new RegExp($(this).attr('regex'));
+        if(!regex.test($(this).val())){
+            $(this).next('.error').fadeIn('fast', function(){
                 $(this).css('top', '1px');
             });
-            $(this).find('.error').fadeIn('fast', function(){
-                username.focus();
-            });
-            return false;
-        }
-        
-        if(password.val() == '') {
-            $(this).find('.error').fadeOut('fast', function(){
-                $(this).css('top', '69px');
-            });
-            $(this).find('.error').fadeIn('fast', function(){
-                password.focus();
-            });
+            $(this).focus();
             return false;
         }
     });
-
-    $('.page-container form .form-control').keyup(function(){
-        $(this).closest('form').find('.error').fadeOut('fast');
+    $('.page-container .form-control').keyup(function(){
+        $(this).next('.error').fadeOut('fast');
     });
 
 
