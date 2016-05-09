@@ -1,10 +1,7 @@
-﻿<html>
-<!DOCTYPE html>
-<html lang="en" class="no-js">
-
-    <head>
-
-        <meta charset="utf-8">
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
         <title>登录</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="">
@@ -27,25 +24,26 @@
                 <div class="lg-icon user-icon"></div>
                 <div class="lg-icon key-icon"></div>
                 <div class="login-tit">后台登录</div>
-                <form action="" method="post">
+                <div class="form">
                     <div class="form-group">
-                        <input name="username" type="text" class="form-control" placeholder="请输入用户名">
+                        <input name="username" id="username" type="text" class="form-control" placeholder="请输入用户名">
                     </div>
                     <div class="form-group">
-                        <input name="password" type="password" class="form-control" placeholder="请输入密码">
+                        <input name="password" id="password" type="password" class="form-control" placeholder="请输入密码">
                     </div>
+                    <div id="loginTips"></div>
                     <div class="form-group remember-me">
                         <input type="checkbox" name="checkbox" id="save_me">
-                        <label for="checkbox">记住</label>
+                        <label for="save_me">记住</label>
                     </div>
                     <div class="form-group op-btns"><button type="submit" class="submit_button">登 录</button></div>
-                </form>
+                </div>
             </div>
         </div>
 		<div class="gradient"></div>
         <!-- Javascript -->
         <script src="assets/js/jquery-1.8.2.min.js" ></script>
-        <script src="assets/js/scripts.js" ></script>
+        <script src="assets/js/login.js" ></script>
 
     </body>
 </html>

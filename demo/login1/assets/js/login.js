@@ -12,7 +12,28 @@ jQuery(function($){
     $('.page-container .form-control').keyup(function(){
         $(this).next('.error').fadeOut('fast');
     });
+    $(".submit_button").click(function(){
+        var username = $("#username");
+        var userpsw = $("#password");
+        var name_regex = new RegExp(username.attr('regex'));
+        var psw_regex = new RegExp(userpsw.attr('regex'));
+        if(!name_regex.test(username.val())){
+            username.next('.error').fadeIn('fast', function(){
+                $(this).css('top', '1px');
+            });
+            username.focus();
+            return false;
 
+        }
+        if(!psw_regex.test(userpsw.val())){
+            userpsw.next('.error').fadeIn('fast', function(){
+                $(this).css('top', '1px');
+            });
+            userpsw.focus();
+            return false;
+
+        }
+    });
 
     $.supersized({
 

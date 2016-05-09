@@ -140,12 +140,6 @@
 	padding: 19px 55px
 }
 
-.lc-block:not(.lcb-alt) .btn-login {
-	top: 50%;
-	margin-top: -25px;
-	right: -25px
-}
-
 .lc-block:not(.toggled) {
 	display: none
 }
@@ -256,39 +250,36 @@ h1.lean span{background: #fff;position: relative;z-index: 999;padding: 0 10px;}
 	background: #fff;
 	border-color: #eee;
 }
-.btn-danger {
+
+.submit_button {
 	color: #fff;
 	background-color: #00A2E9;
 	border-color: #029ADC;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	line-height: 45px!important;	
+	position: absolute!important;
+	text-decoration: none;
+	top: 50%;
+	margin-top: -25px;
+	right: -25px;
+	transition: all 0.16s ease-in;
 }
 
-.btn-danger:focus,
-.btn-danger.focus {
+.submit_button:focus,
+.submit_button.focus {
 	color: #fff;
 	background-color: #ea1c0d;
 	border-color: #891008
 }
 
-.btn-danger:hover {
+.submit_button:hover {
 	color: #fff;
 	background-color: #029ADC;
-	border-color: #00A2E9
+	border-color: #00A2E9;
 }
-
-
-.btn-float {
-	width: 50px;
-	height: 50px;
-	border-radius: 50%;
-	line-height: 45px!important
-}
-
-.btn-float:not(.m-btn) {
-	position: absolute!important;
-	text-decoration: none;
-}
-
-.btn-float i {
+.submit_button i {
 	font-size: 23px;
 	-webkit-transition: all;
 	-o-transition: all;

@@ -10,16 +10,15 @@
 </head>
 <body class="login-content">
 
-    <div class="lc-block toggled" id="l-login">
+    <div class="lc-block toggled">
         <h1 class="lean"><span>后台管理登录</span></h1>
 
         <div class="input-group m-b-20">
             <span class="input-group-addon"><i class="zmdi icon-account"></i></span>
             <div class="fg-line">
-                <input type="text" class="form-control" placeholder="用户名" regex="^\w{3,16}$">
+                <input type="text" name="username" id="username" class="form-control" placeholder="用户名" regex="^\w{3,16}$">
             </div>
         </div>
-
  		<div class="input-group m-b-20">
         	<span class="input-group-addon"><i class="zmdi icon-code"></i></span>
             <div class="fg-line">
@@ -30,12 +29,9 @@
         <div class="input-group m-b-20">
             <span class="input-group-addon"><i class="zmdi icon-lock"></i></span>
             <div class="fg-line">
-                <input type="password" class="form-control" placeholder="密码" regex="^\w+">
+                <input type="password" name="password" id="password" class="form-control" placeholder="密码" regex="^\w+">
             </div>
         </div>
-        
-        <div class="clearfix"></div>
-        
         <div class="checkbox">
             <label>
                 <input type="checkbox" value="">
@@ -43,7 +39,7 @@
             </label>
         </div>
         
-        <a href="" class="btn btn-login btn-danger btn-float"><i class="zmdi icon-arrow-right"></i></a>
+        <a href="" class="btn submit_button"><i class="zmdi icon-arrow-right"></i></a>
         
     </div>
 
@@ -62,7 +58,36 @@
                     $(this).closest('.fg-line').addClass('fg-toggled');
                 }
             });
-        }
+        };
+
+        $(".submit_button").click(function(){
+            var username = $("#username");
+            var userpsw = $("#password");
+            var usercode = $("#vcode");
+            var name_regex = new RegExp(username.attr('regex'));
+            var psw_regex = new RegExp(userpsw.attr('regex'));
+            var code_regex = new RegExp(usercode.attr('regex'));
+            
+            if(!name_regex.test(username.val())){
+                username.closest('.fg-line').addClass('fg-toggled').addClass('has-error');
+            }
+            else{
+                username.closest('.fg-line').addClass('fg-toggled');
+            };
+            if(!psw_regex.test(userpsw.val())){
+                userpsw.closest('.fg-line').addClass('fg-toggled').addClass('has-error');
+            }
+            else{
+                userpsw.closest('.fg-line').addClass('fg-toggled');
+            };
+            if(!code_regex.test(usercode.val())){
+                usercode.closest('.fg-line').addClass('fg-toggled').addClass('has-error');
+            }
+            else{
+                usercode.closest('.fg-line').addClass('fg-toggled');
+            };
+            if(!name_regex.test(username.val()) || !psw_regex.test(userpsw.val()) || !code_regex.test(usercode.val())) return false;
+        });
     </script>
 </body>
 </html>
